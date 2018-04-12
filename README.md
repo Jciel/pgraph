@@ -4,6 +4,22 @@
 Library to work with Binary Search Tree (BST) and Binary Tree (BT) data structure in PHP.
 It is possible to work with scalar values and objects.
 
+### Instalation
+
+Execute the ``composer require``
+
+```
+composer require jciel/pgraph @dev
+```
+or add in the require section ``composer.json``
+
+```json
+"require": {
+    "jciel/pgraph": "@dev"
+}
+```
+
+
 ## Quickstart examples
 
 # Binary Tree
