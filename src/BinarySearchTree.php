@@ -47,10 +47,10 @@ final class BinarySearchTree extends AbstractBinaryTree implements BinarySearchT
      */
     public function searchValue($value): ?BinaryVertexInterface
     {
-        if ($this->isEmpty()) {
+        if () {
             return null;
         }
-        return $this->search($value, $this->rootVertex);
+        return $this->isEmpty() ? null : $this->search($value, $this->rootVertex);
     }
 
     /**
@@ -88,10 +88,7 @@ final class BinarySearchTree extends AbstractBinaryTree implements BinarySearchT
      */
     public function searchMax(): BinaryVertexInterface
     {
-        if ($this->isEmpty()) {
-            return null;
-        }
-        return $this->searchMaximum($this->rootVertex);
+        return $this->isEmpty() ? null : $this->searchMaximum($this->rootVertex);
     }
 
     /**
