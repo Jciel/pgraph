@@ -1,5 +1,5 @@
 {
-    "name": "jciel/PGraph",
+    "name": "jciel/pgraph",
     "description": "Biblioteca para trabalhar com grafos em PHP",
     "type": "library",
     "license": "MIT",
