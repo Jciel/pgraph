@@ -47,10 +47,7 @@ final class BinarySearchTree extends AbstractBinaryTree implements BinarySearchT
      */
     public function searchValue($value): ?BinaryVertexInterface
     {
-        if () {
-            return null;
-        }
-        return $this->isEmpty() ? null : $this->search($value, $this->rootVertex);
+       return $this->isEmpty() ? null : $this->search($value, $this->rootVertex);
     }
 
     /**
