@@ -72,8 +72,7 @@ final class BinaryTree extends AbstractBinaryTree implements BinaryTreeInterface
     {
         $this->searchCompare = $searchCompareFunction;
     }
-
-
+    
     /**
      * @param BinaryVertexInterface $newVertex
      * @param BinaryVertexInterface $currentVertex
@@ -81,13 +80,15 @@ final class BinaryTree extends AbstractBinaryTree implements BinaryTreeInterface
      */
     private function add(BinaryVertexInterface $newVertex, BinaryVertexInterface $currentVertex)
     {
+        $setParent = $this->getSetParentFunction();
+        
         if (!$currentVertex->hasLeftVertex()) {
-            $newVertex->setParent($currentVertex);
+            $setParent->call($newVertex, $currentVertex);
             return $currentVertex->setLeftVertex($newVertex);
         }
 
         if (!$currentVertex->hasRightVertex()) {
-            $newVertex->setParent($currentVertex);
+            $setParent->call($newVertex, $currentVertex);
             return $currentVertex->setRightVertex($newVertex);
         }
 

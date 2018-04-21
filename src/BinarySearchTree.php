@@ -104,7 +104,6 @@ final class BinarySearchTree extends AbstractBinaryTree implements BinarySearchT
         $this->searchCompare = $searchCompareFunction;
     }
 
-
     /**
      * @param BinaryVertexInterface $newVertex
      * @param BinaryVertexInterface $currentVertex
@@ -114,13 +113,15 @@ final class BinarySearchTree extends AbstractBinaryTree implements BinarySearchT
     {
         $isSmaller = call_user_func_array($this->addCompare, [$newVertex, $currentVertex]);
 
+        $setParent = $this->getSetParentFunction();
+        
         if ($isSmaller && empty($currentVertex->getLeftVertex())) {
-            $newVertex->setParent($currentVertex);
+            $setParent->call($newVertex, $currentVertex);
             return $currentVertex->setLeftVertex($newVertex);
         }
 
         if (!$isSmaller && empty($currentVertex->getRightVertex())) {
-            $newVertex->setParent($currentVertex);
+            $setParent->call($newVertex, $currentVertex);
             return $currentVertex->setRightVertex($newVertex);
         }
 
