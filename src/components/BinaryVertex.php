@@ -108,21 +108,12 @@ final class BinaryVertex implements BinaryVertexInterface
     {
         return $this->rightVertex;
     }
-
-
+    
     /**
      * @return null|BinaryVertexInterface
      */
     public function getParent(): ?BinaryVertexInterface
     {
         return $this->parent;
-    }
-
-    /**
-     * @param BinaryVertexInterface $parent
-     */
-    public function setParent(BinaryVertexInterface $parent)
-    {
-        $this->parent = $parent;
     }
 }

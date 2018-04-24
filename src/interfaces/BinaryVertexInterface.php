@@ -46,8 +46,8 @@ interface BinaryVertexInterface
      */
     public function getParent(): ?BinaryVertexInterface;
 
-    /**
-     * @param BinaryVertexInterface $newVertex
-     */
-    public function setParent(BinaryVertexInterface $newVertex);
+//    /**
+//     * @param BinaryVertexInterface $newVertex
+//     */
+//    public function setParent(BinaryVertexInterface $newVertex);
 }

@@ -2,6 +2,7 @@
 
 namespace PGraph\abstracts;
 
+use Closure;
 use PGraph\interfaces\BinaryVertexInterface;
 
 abstract class AbstractBinaryTree
@@ -151,5 +152,15 @@ abstract class AbstractBinaryTree
         }
 
         return $currentVertex;
+    }
+
+    /**
+     * @return Closure
+     */
+    protected function getSetParentFunction(): Closure
+    {
+        return function (BinaryVertexInterface $currentVertex) {
+            $this->parent = $currentVertex;
+        };
     }
 }
